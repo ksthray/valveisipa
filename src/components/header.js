@@ -1,35 +1,67 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink} from 'reactstrap';
+import styled from 'styled-components';
+import logo from '../images/logo.png';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Stylet = styled.div`
+  .navbar {
+    background-color : rgba(0,0,0, 0.0);
+    padding: 10px 80px;
+    z-index: 15;
+
+    .logo{
+      width: 55px;
+      height: 55px;
+    }
+  }
+  .navbar-brand, .navbar-nav .nav-link{
+    color: yellow;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .nav-link:hover{border-bottom: 1px solid white;}
+`
+
+const Header = ({ siteTitle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <Stylet>
+      <div className="header">
+        <Navbar expand="sm">
+          <NavbarBrand href="/"><img src={logo} alt="logo" className="logo" /> {siteTitle}</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem id="demo">
+                <NavLink href="/news">News</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/apropos">A propos</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/contact">Contact</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/publicite">Publicite</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    </Stylet>
+  );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
