@@ -13,8 +13,7 @@ import logo from '../images/logo.png';
 
 const Stylet = styled.div`
   .navbar {
-    background-color : rgba(0,0,0, 0.0);
-    padding: 10px 80px;
+    background-color : transparent;
     z-index: 15;
 
     .logo{
@@ -39,24 +38,26 @@ const Header = ({ siteTitle }) => {
     <Stylet>
       <div className="header">
         <Navbar expand="sm">
-          <NavbarBrand href="/"><img src={logo} alt="logo" className="logo" /> {siteTitle}</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem id="demo">
-                <NavLink href="/news">News</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/apropos">A propos</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/publicite">Publicite</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+          <div className="container">
+            <NavbarBrand href="/"><img src={logo} alt="logo" className="logo" /> {siteTitle}</NavbarBrand>
+            <NavbarToggler onClick={toggle} />
+            <Collapse isOpen={isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem id="demo">
+                  <NavLink href="/news">News</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/apropos">A propos</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/contact">Contact</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/publicite">Publicite</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </div>
         </Navbar>
       </div>
     </Stylet>
