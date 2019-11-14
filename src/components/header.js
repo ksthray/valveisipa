@@ -22,11 +22,16 @@ const Stylet = styled.div`
     }
   }
   .navbar-brand, .navbar-nav .nav-link{
-    color: yellow;
-    font-size: 16px;
+    color: white;
+    font-size: 14px;
     text-transform: uppercase;
   }
-  .nav-link:hover{border-bottom: 1px solid white;}
+  .nav-link{
+    justify-content: space-around;
+  }
+  .nav-link:hover{
+    color: #eeeeee;
+  }
 `
 
 const Header = ({ siteTitle }) => {

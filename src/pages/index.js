@@ -3,6 +3,7 @@ import SEO from "../components/seo";
 import { graphql, StaticQuery } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/layout';
+import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
 import {
   Carousel,
@@ -10,8 +11,8 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  /*Row,
-Col*/} from 'reactstrap';
+  Row,
+  Col} from 'reactstrap';
 import styled from 'styled-components';
 import imagefirst from '../images/tablet.jpg';
 import imagesec from '../images/laptop.jpg';
@@ -28,7 +29,7 @@ const IndexStyle = styled.div`
   }
   .container{
     position: relative;
-    top: 500px;
+    top: 570px;
   }
   
 
@@ -97,7 +98,7 @@ const IndexPage = () => {
     );
   });
   return (
-    <Layout>
+    <Layout> 
       <SEO title="Home" />
       <IndexStyle>
         <div className="header-index">
@@ -113,19 +114,28 @@ const IndexPage = () => {
           </Carousel>
         </div>
         <div className="container">
-          <StaticQuery query={indexQuery} render={data => (
-            <div className="post">
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post 
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  date={node.frontmatter.date}
-                  path={node.frontmatter.path}
-                  body={node.excerpt}
-                />
-              ))} 
-            </div>
-          )}/>
+          <Row>
+            <Col md="8">
+              <StaticQuery query={indexQuery} render={data => (
+                <div className="post">
+                  {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <Post 
+                      key={node.id}
+                      title={node.frontmatter.title}
+                      author={node.frontmatter.author}
+                      date={node.frontmatter.date}
+                      path={node.frontmatter.path}
+                      body={node.excerpt}
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
+                  ))} 
+                </div>
+              )}/>         
+            </Col>
+            <Col md="4">
+              <Sidebar/>
+            </Col>
+          </Row>
         </div>
       </IndexStyle>
     </Layout>
@@ -143,6 +153,13 @@ const indexQuery = graphql`
             date(formatString: "MMM Do YYYY")
             author
             path
+            image{
+              childImageSharp{
+                fluid(maxWidth: 600){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }
