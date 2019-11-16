@@ -9,19 +9,21 @@ import {
     CardSubtitle
 } from 'reactstrap';
 
-const Post = ({ title, author, path, date, body, fluid, tags}) => (
+const Post = ({ title, author, slug, date, body, fluid}) => (
     <Card style={{marginBottom: "20px"}}>
-        <Img className="card-image-top" fluid={fluid} style={{width: "100%", height: "300px"}} />
+        <Link to={slug}>
+            <Img className="card-image-top" fluid={fluid} style={{width: "100%", height: "300px"}} />
+        </Link>
         <CardBody>
             <CardTitle style={{textTransform: "uppercase"}}>
-                <Link to={path}>{title}</Link>
+                <Link to={slug}>{title}</Link>
             </CardTitle>
             <CardSubtitle>
                 <span className="text-info">{date}</span> Par {` `}
                 <span className="text-info">{author}</span>
             </CardSubtitle>
             <CardText>{body}</CardText>
-            <Link to={path} className="btn btn-outline-primary float-right text-uppercase">
+            <Link to={slug} className="btn btn-outline-primary float-right text-uppercase">
                 lire suite
             </Link>
         </CardBody>
