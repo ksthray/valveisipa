@@ -10,3 +10,6 @@ la plus jeune riche
 Ca y est je reussi, je bosser du pour faire ça et je sais que ca seras valider par mon directeur et 
 par l'isipa je suis devenue masterweb de ce site et gagne des l'argents, je suis tellement heureux de
 reussir a faire sa, c'est comme dans un reve waouh, merci a mon Dieu
+Je suis tellement heureux, je conditionner mon cerverau a travailler et a etre orienter resultats
+et j'attirer plus de richesse en moi, qui a fais de moi l'homme que je suis maintenant.
+Ouaish...

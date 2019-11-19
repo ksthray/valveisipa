@@ -11,7 +11,7 @@ const SidebarStyle = styled.div`
     }
 `
 
-const Sidebar = ({ author, authorFluid }) => ( 
+const Sidebar = ({ author, authorFluid }) => (  
     <SidebarStyle>
         {author && (
             <Card>
@@ -19,6 +19,7 @@ const Sidebar = ({ author, authorFluid }) => (
                 <CardBody>
                     <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
                     <CardText>{author.bio}</CardText>
+                    <CardText><strong>{author.dept}</strong></CardText>
                 </CardBody>
             </Card>
         )}

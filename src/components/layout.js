@@ -29,9 +29,9 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
   return (
     <>
       <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Jumbotron/>
-        <div className="container">
+        <Header siteTitle={data.site.siteMetadata.title} /> 
+        <Jumbotron />
+        <div className="container" style={{padding: "10px", position: "relative", top: "40px"}}>
           <h1>{pageTitle}</h1>
           <Row>
             <Col md="8">{children}</Col>

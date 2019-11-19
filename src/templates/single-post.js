@@ -3,8 +3,8 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SEO from '../components/seo';
-import authors from '../utils/authors'
-import {Card, CardBody, CardSubtitle} from 'reactstrap';
+import authors from '../utils/authors' 
+import {Card, CardBody, CardSubtitle} from 'reactstrap';  
 
 const SinglePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter

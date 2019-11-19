@@ -11,7 +11,7 @@ const StyleJumbo = styled.div`
         color: #ccc;
         position: relative;
         z-index:-2;
-
+        top: 81px;
     }
 
     .overlay{

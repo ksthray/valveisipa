@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from "../components/seo";
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/layout';
 import Post from '../components/Post';

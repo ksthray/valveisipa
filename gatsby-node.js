@@ -1,6 +1,6 @@
 const { slugify } = require('./src/utils/utilityFunctions');
 const path = require('path')
-const authors = require('./src/utils/authors')
+const authors = require('./src/utils/authors') 
 
 exports.onCreateNode = ({ node, actions }) => {
     const {createNodeField} = actions
@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql}) => {
     `).then(res => {
         if(res.errors) return Promise.reject(res.errors) 
 
-        const posts = res.data.allMarkdownRemark.edges
+        const posts = res.data.allMarkdownRemark.edges 
 
         posts.forEach(({node}) => {
             createPage({
