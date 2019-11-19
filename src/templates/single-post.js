@@ -1,19 +1,15 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Sidebar from '../components/Sidebar';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SEO from '../components/seo';
-import {Row, Col, Card, CardBody, CardSubtitle} from 'reactstrap';
+import {Card, CardBody, CardSubtitle} from 'reactstrap';
 
 const SinglePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter
     return (
-        <Layout>
+        <Layout pageTitle={post.title}>
             <SEO title={post.title} />
-            <h1 style={{textTransform: "uppercase"}}>{post.title}</h1>
-            <Row>
-                <Col md="8">
                     <Card>
                         <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                         <CardBody>
@@ -26,11 +22,6 @@ const SinglePost = ({ data }) => {
                             />
                         </CardBody>
                     </Card>
-                </Col>
-                <Col md="4"> 
-                    <Sidebar/>
-                </Col>
-            </Row>
         </Layout>
     );
 }

@@ -13,7 +13,7 @@ import logo from '../images/logo.png';
 
 const Stylet = styled.div`
   .navbar {
-    background-color : transparent;
+    background-color : #fff;
     z-index: 15;
 
     .logo{
@@ -22,15 +22,17 @@ const Stylet = styled.div`
     }
   }
   .navbar-brand, .navbar-nav .nav-link{
-    color: white;
+    color: #9F9F9F;
     font-size: 14px;
     text-transform: uppercase;
+    font-family: calibri;
+    font-weight: 500;
   }
   .nav-link{
     justify-content: space-around;
   }
   .nav-link:hover{
-    color: #eeeeee;
+    color: #000;
   }
 `
 
