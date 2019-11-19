@@ -15,7 +15,7 @@ import Jumbotron from './Jumbotron'
 import Sidebar from './Sidebar'
 import { Row, Col} from 'reactstrap'
 
-const Layout = ({ children, pageTitle }) => {
+const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,7 +36,7 @@ const Layout = ({ children, pageTitle }) => {
           <Row>
             <Col md="8">{children}</Col>
             <Col md="4">
-              <Sidebar/>
+              <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
             </Col>
           </Row>
         </div>

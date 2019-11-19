@@ -1,7 +1,7 @@
 ---
 title: "Mon Premier - post"
 date: 2019-03-27 16:05:02
-author: "Ksthray"
+author: "Kikuati Ntotila"
 image: ../../images/beverage.jpg
 ---
 Je suis tellement heureux, je conditionner mon cerverau a travailler et a etre orienter resultats

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import {Card, /*CardSubtitle,*/ CardTitle, CardBody, Form, FormGroup, Input} from 'reactstrap';
+import {Card, CardTitle, CardBody, Form, FormGroup, Input, CardText} from 'reactstrap';
 import styled from 'styled-components';
 import pub from '../images/pizza.jpg';
 
@@ -11,8 +11,17 @@ const SidebarStyle = styled.div`
     }
 `
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => ( 
     <SidebarStyle>
+        {author && (
+            <Card>
+                <Img className="card-image-top" fluid={authorFluid}/>
+                <CardBody>
+                    <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
+                    <CardText>{author.bio}</CardText>
+                </CardBody>
+            </Card>
+        )}
         <Card>
             <CardBody>
                 <CardTitle className="text-center text-uppercase mb-3">

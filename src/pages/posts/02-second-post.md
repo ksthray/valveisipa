@@ -1,7 +1,7 @@
 ---
 title: "Mon Deuxieme - post"
 date: 2019-03-28 09:05:02
-author: "Christ"
+author: "Kongolo Monga"
 image: ../../images/handshake.jpg
 ---
 Elle s'appelle christenvie, elle est ma femme, tout comme moi elle a reussie a conditionner aussi son cerveau
