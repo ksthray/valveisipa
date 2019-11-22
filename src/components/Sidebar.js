@@ -1,13 +1,17 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import {Card, CardTitle, CardBody, Form, FormGroup, Input, CardText} from 'reactstrap';
+import {Card, CardTitle, CardBody, CardText} from 'reactstrap';
 import styled from 'styled-components';
 import pub from '../images/pizza.jpg';
 
 const SidebarStyle = styled.div`
     .card{
         margin-bottom: 20px;
+        position: relative;
+    }
+    .card-title{
+     
     }
 `
 
@@ -18,30 +22,11 @@ const Sidebar = ({ author, authorFluid }) => (
                 <Img className="card-image-top" fluid={authorFluid}/>
                 <CardBody>
                     <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
-                    <CardText>{author.bio}</CardText>
-                    <CardText><strong>{author.dept}</strong></CardText>
+                    <CardText className="text-center">{author.bio}</CardText>
+                    <CardText className="text-center"><strong>{author.dept}</strong></CardText>
                 </CardBody>
             </Card>
         )}
-        <Card>
-            <CardBody>
-                <CardTitle className="text-center text-uppercase mb-3">
-                    NewsLetter
-                </CardTitle>
-                <Form className="text-center">
-                    <FormGroup>
-                        <Input 
-                            type="email"
-                            name="email"
-                            placeholder="Entrer votre adresse email" 
-                        />
-                    </FormGroup>
-                    <button className="btn btn-outline-success text-uppercase">
-                        Souscrire
-                    </button>
-                </Form>
-            </CardBody>
-        </Card>
         <Card>
             <CardBody>
                 <CardTitle className="text-center text-uppercase">
@@ -50,7 +35,7 @@ const Sidebar = ({ author, authorFluid }) => (
                 <img 
                     src={pub}
                     alt="Pub"
-                    style={{width: "310px", height: "200px;"}} 
+                    style={{width: "310px", height: "170px;"}} 
                 />
             </CardBody>
         </Card>

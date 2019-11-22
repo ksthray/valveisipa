@@ -5,25 +5,43 @@ import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import authors from '../utils/authors' 
 import {Card, CardBody, CardSubtitle} from 'reactstrap';  
+import { DiscussionEmbed } from 'disqus-react';
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter
-    const author = authors.find(x => x.name ===  post.author)
+    const author = authors.find(x => x.name ===  post.author) 
+
+    const baseUrl = "https://gatsbytutorial-co-uk/"
+
+    const disqusShortname = 'https-gatsbytutorial-co-uk';
+    const disqusConfig = {
+        identifier: data.markdownRemark.id,
+        title: post.title,
+        url: baseUrl + pageContext.slug
+    }
+
     return (
         <Layout pageTitle={post.title} postAuthor={author} authorImageFluid={data.file.childImageSharp.fluid}>
             <SEO title={post.title} />
-                <Card>
-                    <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
-                    <CardBody>
-                        <CardSubtitle>
-                            <span className="text-info">{post.date} By {` `}</span>
-                            <span className="text-info">{post.author}</span>
-                        </CardSubtitle>
-                        <div 
-                            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}
-                        />
-                    </CardBody>
-                </Card>
+            <Card>
+                <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
+                <CardBody>
+                    <CardSubtitle>
+                        <span className="text-info">{post.date} By {` `}</span>
+                        <span className="text-info">{post.author}</span>
+                    </CardSubtitle>
+                    <div 
+                        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}
+                    />
+                </CardBody>
+            </Card>
+            <div>
+                <h3 className="text-center">
+                    Commentez la publication
+                </h3>
+                <br/>
+                <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
+            </div>
         </Layout>
     );
 }

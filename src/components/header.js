@@ -42,24 +42,6 @@ const Header = ({ siteTitle }) => {
 
   const toggle = () => setIsOpen(!isOpen);
   
-  /*let scrollY = function () {
-    let supportPageOffset = window.pageXOffset !== undefined;
-    let isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-    return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-  }
-
-  const onScroll = () => {
-    const element = document.querySelector('.header')
-    const top = element.getBoundingClientRect().top + scrollY();
-    if(scrollY() > top) {
-      element.classList.add('fixed')
-    }
-    else{
-      element.classList.remove('fixed')
-    }
-  } 
-  window.addEventListener('scroll', onScroll)*/
-
   return (
     <Stylet>
       <div className="header">
@@ -70,16 +52,13 @@ const Header = ({ siteTitle }) => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem id="demo">
-                  <NavLink href="/news">News</NavLink>
+                  <NavLink href="/news">Acceuil</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/apropos">A propos</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/contact">Contact</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/publicite">Publicite</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

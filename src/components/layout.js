@@ -14,6 +14,28 @@ import "./layout.css"
 import Jumbotron from './Jumbotron'
 import Sidebar from './Sidebar'
 import { Row, Col} from 'reactstrap'
+import styled from 'styled-components'
+
+const LayoutStyle = styled.div`
+  .title{
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    padding-top: 15px;
+    position: relative;
+    top: 50px;
+  }
+  @media screen and (max-width: 420px) {
+    .text-center h2{
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 325px) {
+    .text-center h2{
+      font-size: 22px;
+    }
+  }
+`
 
 const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
   const data = useStaticQuery(graphql`
@@ -28,11 +50,15 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
 
   return (
     <>
-      <div>
+      <LayoutStyle>
         <Header siteTitle={data.site.siteMetadata.title} /> 
         <Jumbotron />
-        <div className="container" style={{padding: "10px", position: "relative", top: "40px"}}>
-          <h1>{pageTitle}</h1>
+        <div className="text-center title">
+            <h2 style={{textTransform: "uppercase"}}>
+              {pageTitle}
+            </h2>
+        </div>
+        <div className="container" style={{padding: "10px", position: "relative", top: "42px"}}>
           <Row>
             <Col md="8">{children}</Col>
             <Col md="4">
@@ -40,7 +66,7 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
             </Col>
           </Row>
         </div>
-      </div>
+      </LayoutStyle>
     </>
   )
 }
