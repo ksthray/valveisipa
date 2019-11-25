@@ -27,8 +27,8 @@ const SinglePost = ({ data, pageContext }) => {
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                 <CardBody>
                     <CardSubtitle>
-                        <span className="text-info">{post.date} By {` `}</span>
-                        <span className="text-info">{post.author}</span>
+                        <span className="text-info text-uppercase">{post.author}</span> <br/>
+                        <span className="text-info">{post.date}</span>
                     </CardSubtitle>
                     <div 
                         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}
@@ -36,8 +36,8 @@ const SinglePost = ({ data, pageContext }) => {
                 </CardBody>
             </Card>
             <div>
-                <h3 className="text-center">
-                    Commentez la publication
+                <h3 className="text-center text-uppercase">
+                    Reagissez par des commentaire
                 </h3>
                 <br/>
                 <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>

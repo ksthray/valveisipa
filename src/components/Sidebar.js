@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import {Card, CardTitle, CardBody, CardText} from 'reactstrap';
+import {Card, CardTitle, CardBody, CardText, CardImg} from 'reactstrap';
+import { FaRegClock, FaFacebookF } from 'react-icons/fa';
 import styled from 'styled-components';
-import pub from '../images/pizza.jpg';
+import pub from '../images/gear.jpg';
 
 const SidebarStyle = styled.div`
     .card{
@@ -13,6 +14,11 @@ const SidebarStyle = styled.div`
     .card-title{
      
     }
+    .icon{
+        position: relative;
+        top: -2px;
+    }
+
 `
 
 const Sidebar = ({ author, authorFluid }) => (  
@@ -21,7 +27,7 @@ const Sidebar = ({ author, authorFluid }) => (
             <Card>
                 <Img className="card-image-top" fluid={authorFluid}/>
                 <CardBody>
-                    <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
+                    <CardTitle className="text-center text-uppercase mb-3"><strong>{author.name}</strong></CardTitle>
                     <CardText className="text-center">{author.bio}</CardText>
                     <CardText className="text-center"><strong>{author.dept}</strong></CardText>
                 </CardBody>
@@ -29,20 +35,24 @@ const Sidebar = ({ author, authorFluid }) => (
         )}
         <Card>
             <CardBody>
-                <CardTitle className="text-center text-uppercase">
+                <CardTitle style={{color: "rgb(255, 84, 17)", fontWeight: "500"}} className="text-center text-uppercase">
                     Publicité
                 </CardTitle>
-                <img 
+                <CardImg bottom width="100%"
                     src={pub}
                     alt="Pub"
-                    style={{width: "310px", height: "170px;"}} 
                 />
+                <CardText style={{color: "blue"}}>
+                    <Link to="http://facebook.com">
+                        <FaFacebookF className="icon"/> http://momento.facebook.com
+                    </Link>
+                </CardText>
             </CardBody>
         </Card>
         <Card>
             <CardBody>
-                <CardTitle className="text-center text-uppercase">
-                    Dernier News
+                <CardTitle style={{color: "rgb(255, 84, 17)", fontWeight: "500"}} className="text-center text-uppercase">
+                    <FaRegClock className="icon"/> Recent News
                 </CardTitle>
                 <StaticQuery query={sidebarQuery} render={(data) => (
                     <div>

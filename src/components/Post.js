@@ -8,6 +8,7 @@ import {
     CardTitle, 
     CardSubtitle
 } from 'reactstrap';
+import { FaRegCalendarAlt, FaRegBell, FaFeatherAlt } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const StyleCard = styled.div`
@@ -26,6 +27,11 @@ const StyleCard = styled.div`
     .overflow{
         overflow: hidden;
     }
+    .icons{
+        position: relative;
+        top: -2px;
+    }
+
 `
 
 const Post = ({ title, author, slug, date, body, fluid}) => ( 
@@ -37,16 +43,16 @@ const Post = ({ title, author, slug, date, body, fluid}) => (
                 </Link>
             </div>
             <CardBody>
-                <CardTitle style={{textTransform: "uppercase"}}>
-                    <Link to={slug}>{title}</Link>
+                <CardTitle style={{textTransform: "uppercase", fontWeight: "500"}}>
+                    <Link style={{color: "rgb(255, 84, 17)"}} to={slug}><FaRegBell className="icons"/> {title}</Link>
                 </CardTitle>
-                <CardSubtitle>
-                    <span className="text-info">{date}</span> Par {` `}
-                    <span className="text-info">{author}</span>
+                <CardSubtitle style={{color: "rgb(255, 84, 17)"}}>
+                    <span style={{color: "rgb(255, 84, 17)"}}><FaRegCalendarAlt className="icons"/> Depuis {date}</span> <br/>
+                    <span style={{color: "rgb(255, 84, 17)"}}><FaFeatherAlt className="icons"/> {author}</span>
                 </CardSubtitle>
                 <CardText>{body}</CardText>
-                <Link to={slug} className="btn btn-outline-primary float-right text-uppercase">
-                    lire suite
+                <Link to={slug} className="btn btn-outline-warning float-right text-uppercase">
+                    lire la suite
                 </Link>
             </CardBody>
         </Card>

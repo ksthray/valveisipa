@@ -28,12 +28,14 @@ const Stylet = styled.div`
     text-transform: uppercase;
     font-family: calibri;
     font-weight: 500;
+    color: rgb(255, 84, 17) !important;
   }
   .nav-link{
     justify-content: space-around;
   }
   .nav-link:hover{
-    color: #000;
+    background-color: rgba(255, 84, 17);
+    color: #fff !important;
   }
 `
 
@@ -52,7 +54,7 @@ const Header = ({ siteTitle }) => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem id="demo">
-                  <NavLink href="/news">Acceuil</NavLink>
+                  <NavLink href="/">Acceuil</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/apropos">A propos</NavLink>
