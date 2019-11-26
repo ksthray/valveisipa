@@ -1,8 +1,14 @@
+/*
+    Ici j'importe tous le module ( plugin )
+    Qui nous serons utils a notre composant Section.Js
+*/
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FaRegHdd, FaRegSun, FaRegHandshake, FaRegPaperPlane } from 'react-icons/fa';
 import { Container, Col, Row} from 'reactstrap';
 
+//SectionStyle, ce pour utilser du Css dans Js grace a Styled-Components
 const SectionStyle =  styled.div`
     .section{
         padding: 20px;
@@ -44,6 +50,7 @@ const SectionStyle =  styled.div`
         position: relative;
         top: 75px;
         left: 100px;
+        box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.220)!important;
         h6, p{ 
             color: black !important;
         }
@@ -60,8 +67,178 @@ const SectionStyle =  styled.div`
             font-weight: 300;
         }
     }
+    //Responsive pour le smartphone qui 325px en longueur
+    @media screen and (max-width: 325px) {
+        .section{
+            height: auto;
+            h1{
+                font-size: 20px;
+            }
+        }
+        .icon-gest{
+            font-size: 35px;
+            position: relative;
+            top: 5px;
+            left: 115px;
+        }
+        .promotion{
+            position: relative;
+            top: 5px;
+            h6{
+                position: relative;
+                top: 5px;
+            }
+        }
+        .bottom-bar{
+            padding: 10px;
+            width: 60%;
+            height: auto;
+            position: relative;
+            top: 55px;
+            left: 55px;
+            
+            h6{
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(255, 84, 17) !important;
+            }
+            p{
+                position: relative;
+                top: 15px;
+                color: rgb(223, 223, 223);
+                text-transform: lowercase;
+                font-weight: 300;
+            }
+        }
+    } 
+    //Responsive pour le smartphone qui 365px en longueur
+    @media screen and (max-width: 365px) {
+        .section{
+          height: auto;
+          h1{font-size: 23px;}
+        }
+        .icon-gest{
+            font-size: 45px;
+            position: relative;
+            top: 5px;
+            left: 115px;
+        }
+        .promotion{
+            position: relative;
+            top: 5px;
+            h6{
+                position: relative;
+                top: 5px;
+            }
+        }
+        .bottom-bar{
+            padding: 10px;
+            width: 60%;
+            height: auto;
+            position: relative;
+            top: 55px;
+            left: 60px;
+            
+            h6{
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(255, 84, 17) !important;
+            }
+            p{
+                position: relative;
+                top: 15px;
+                color: rgb(223, 223, 223);
+                text-transform: lowercase;
+                font-weight: 300;
+            }
+        }   
+    }
+    //Responsive pour le smartphone qui 380px en longueur
+    @media screen and (max-width: 380px) {
+        .section{
+            height: auto;
+            h1{font-size: 23px;}
+        }
+        .icon-gest{
+            font-size: 50px;
+            position: relative;
+            top: 5px;
+            left: 115px;
+        }
+        .promotion{
+            position: relative;
+            top: 5px;
+            h6{
+                position: relative;
+                top: 5px;
+            }
+        }
+        .bottom-bar{
+            padding: 10px;
+            width: 60%;
+            height: auto;
+            position: relative;
+            top: 55px;
+            left: 60px;
+              
+            h6{
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(255, 84, 17) !important;
+            }
+            p{
+                position: relative;
+                top: 15px;
+                color: rgb(223, 223, 223);
+                text-transform: lowercase;
+                font-weight: 300;
+            }
+        }   
+    }
+    //Responsive pour le smartphone qui 415px en longueur
+    @media screen and (max-width: 415px) {
+        .section{
+            height: auto;
+            h1{font-size: 23px;}
+        }
+        .icon-gest{
+            font-size: 50px;
+            position: relative;
+            top: 5px;
+            left: 135px;
+        }
+        .promotion{
+            position: relative;
+            top: 5px;
+            h6{
+                position: relative;
+                top: 5px;
+            }
+        }
+        .bottom-bar{
+            padding: 10px;
+            width: 60%;
+            height: auto;
+            position: relative;
+            top: 55px;
+            left: 70px;
+              
+            h6{
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(255, 84, 17) !important;
+            }
+            p{
+                position: relative;
+                top: 15px;
+                color: rgb(223, 223, 223);
+                text-transform: lowercase;
+                font-weight: 300;
+            }
+        }   
+    }
 `
-
+//Mon composant Section
 const Section = () => {
     return (
         <SectionStyle>
@@ -83,7 +260,9 @@ const Section = () => {
                         <Row>
                             <Col md="3">
                                 <FaRegHdd className="icon-gest"/>
-                                <h6>Gestion Informatique</h6>
+                                <Link to="gestion-informatique">
+                                    <h6>Gestion Informatique</h6>
+                                </Link>
                             </Col>
                             <Col md="3">
                                 <FaRegSun className="icon-gest"/>

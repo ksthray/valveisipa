@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import Header from '../components/header'
+import Footer from '../components/Footer'
 import styled from 'styled-components'
 import { Container, Row, Col, Card, CardImg} from 'reactstrap'
 import image from '../images/businessman.jpg'
@@ -43,28 +44,58 @@ const AproposPage = () => (
     <Header/>
     <div className="stylepage">
       <h2>A propos</h2>
+      <Container>
+        <Row>
+          <Col>
+            <Card>
+              <CardImg width="100%" src={image} alt="nous sommes news-isipa"/>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="6">
+            <div className="apropos">
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+            </div>
+          </Col>
+          <Col md="6">
+            <div className="apropos">
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+              <h5>Qui sommes nous ?</h5>
+              <small>
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
+                informations se retrouvant dans le valve sue le site internet
+              </small>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      <br/>
+      <Footer/>
     </div>
-    <Container>
-      <Row>
-        <Col>
-          <Card>
-            <CardImg width="100%" src={image} alt="nous sommes news-isipa"/>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md="6">
-          <div className="apropos">
-            <h5>Qui sommes nous ?</h5>
-            <small>
-              Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-              informations se retrouvant dans le valve sue le site internet
-            </small>
-          </div>
-        </Col>
-        <Col md="6"></Col>
-      </Row>
-    </Container>
   </StylePage>
 )
 

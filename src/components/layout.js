@@ -14,7 +14,8 @@ import "./layout.css"
 import Jumbotron from './Jumbotron'
 import Sidebar from './Sidebar'
 import Section from './Section'
-import { Row, Col} from 'reactstrap'
+import Footer from './Footer'
+import { Row, Col, Container} from 'reactstrap'
 import styled from 'styled-components'
 
 const LayoutStyle = styled.div`
@@ -41,7 +42,7 @@ const LayoutStyle = styled.div`
     }
     .cadre{
       position: relative;
-      top: 82px !important;
+      top: 90px !important;
     }
     .text-center h2{
       font-size: 32px;
@@ -54,7 +55,7 @@ const LayoutStyle = styled.div`
     }
     .cadre{
       position: relative;
-      top: 75px !important;
+      top: 85px !important;
     }
     .text-center h2{
       font-size: 28px;
@@ -67,7 +68,7 @@ const LayoutStyle = styled.div`
     }
     .cadre{
       position: relative;
-      top: 70px !important;
+      top: 80px !important;
     }
   }
 //Iphone 5/5S/E/6 simple
@@ -78,7 +79,7 @@ const LayoutStyle = styled.div`
     }
     .cadre{
       position: relative;
-      top: 70px !important;
+      top: 80px !important;
     }
     .text-center h2{
       font-size: 22px;
@@ -88,6 +89,54 @@ const LayoutStyle = styled.div`
     position: relative;
     top: 15px;
   }
+  @media screen and (max-width: 325px) {
+    .sect{
+      position: relative;
+      top: 30px;
+    }
+    .fouter{
+      position: relative;
+      top: 90px !important;
+      overflow-y: hidden !important;
+      overflow-x: hidden !important;
+    }
+  }
+  @media screen and (max-width: 365px) {
+    .sect{
+      position: relative;
+      top: 30px;
+    }
+    .fouter{
+      position: relative;
+      top: 130px !important;
+      overflow-y: hidden !important;
+      overflow-x: hidden !important;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .sect{
+      position: relative;
+      top: 40px;
+    }
+    .fouter{
+      position: relative;
+      top: 130px !important;
+      overflow-y: hidden !important;
+      overflow-x: hidden !important;
+    }
+  } 
+  @media screen and (max-width: 415px) {
+    .sect{
+      position: relative;
+      top: 40px;
+    }
+    .fouter{
+      position: relative;
+      top: 130px !important;
+      overflow-y: hidden !important;
+      overflow-x: hidden !important;
+    }
+  } 
 `
 
 const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
@@ -111,18 +160,23 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
               {pageTitle}
             </h2>
         </div>
-        <div className="container cadre" style={{padding: "10px", position: "relative", top: "42px"}}>
-          <Row>
-            <Col md="8">{children}</Col>
-            <Col md="4">
-              <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
-            </Col>
-          </Row>
-        </div>
-        <div>
+        <div className="cadre" style={{position: "relative", top: "50px"}}>
+          <Container>
+            <Row>
+              <Col md="8">{children}</Col>
+              <Col md="4">
+                <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
+              </Col>
+            </Row>
+          </Container>
           <Row>
             <Col>
               <Section/>
+            </Col>
+          </Row>
+          <Row style={{position: "relative", top: "60px"}}>
+            <Col>
+              <Footer/>
             </Col>
           </Row>
         </div>
