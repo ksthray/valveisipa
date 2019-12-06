@@ -57,37 +57,34 @@ const AproposPage = () => (
             <div className="apropos">
               <h5>Qui sommes nous ?</h5>
               <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
+                Nous sommes une plateforme de blog dans l'Isipa ayant pour but de mettre toutes
+                informations se retrouvant dans le valve et autre qui ne sera pas afficher sur le site.
               </small>
-              <h5>Qui sommes nous ?</h5>
+              <h5>Notre Histoire ?</h5>
               <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
-              </small>
-              <h5>Qui sommes nous ?</h5>
-              <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
+                Au fil de temps passé a l'isipa, nous avons remarquer que les informations afficher dans la valve
+                n'est pas vraiment suivi par les étudiants, il y a 30% pour des étudiants qui regarde contatement
+                la valve, alors pourquoi ne pas créer un blog d'isipa qui permettra a tous ses étudiants, grace
+                a leur smartphone d'avoir acces au site et regarder tous les informations qui y seront afficher.
+                c'est pour cette but qu'est née <strong>News ISIPA</strong>
               </small>
             </div>
           </Col>
           <Col md="6">
             <div className="apropos">
-              <h5>Qui sommes nous ?</h5>
+              <h5>Publicité ?</h5>
               <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
+                Vous pouvez nous contacter pour faire une promotion de votre produit éduacatif, les
+                offre de PUB commence a partie <mark>15$ le mois</mark> qui serra afficher dans la 
+                sidebar du site (la partie droite du site), et <mark>30$ le mois</mark> pour que sa soit 
+                afficher sur le landing ou jumbotron de la page d'accueil (la partie haut de la page apres 
+                le menu)
               </small>
-              <h5>Qui sommes nous ?</h5>
+              <h5>Comment nous travaillons ? </h5>
               <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
-              </small>
-              <h5>Qui sommes nous ?</h5>
-              <small>
-                Nous sommes une plateforme de blog dans l'Isipa ayant pour de mettre toutes
-                informations se retrouvant dans le valve sue le site internet
+                Nous avons une étroite relations avec le Directeur Academique de l'isipa, Mr KIKUATI, puis avec
+                les membres de la Bibliothèque Centrale pour avoir accès aux informations de la valve, puis 
+                avec le Cp de toutes les promotions.
               </small>
             </div>
           </Col>

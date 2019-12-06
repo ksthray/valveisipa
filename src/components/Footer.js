@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Container} from 'reactstrap';
+import { FaRegCopyright, FaRegHeart, FaMapMarkerAlt, FaMobileAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import styled from 'styled-components';
-import logo from '../images/logo.png';
 
 const FooterStyle = styled.div`
     .footer{
@@ -10,6 +10,10 @@ const FooterStyle = styled.div`
         height: auto;
         padding: 10px;
         box-sizing: border-box !important;
+    }
+    .icon{
+        position: relative;
+        top: -2px;
     }
     img{
         width: 50px;
@@ -100,36 +104,41 @@ const Footer = () => {
             <div className="container-fluid footer">
                 <Container>
                     <Row>
-                        <Col md="4" xs="12">
-                            <img src={logo} alt="logo du site" /><span className="span">NEWS-ISIPA</span>
+                        <Col md="4">
+                            <h5>NEWS-ISIPA</h5>
                             <p className="lead">
-                                News isipa c'est une plateforme de l'isipa qui vous sert des informations 
-                                et des donnnées tres important afficher dans la valve, ils vous informe. Nous 
-                                sommes une nouvelle generation des etudiants.
+                                C'est une plateforme de blog, active et a plein évolution, il dédié a l'isipa,
+                                utiliser uniquement par les etudiants de l'isipa.
                             </p>
                         </Col>
                         <Col md="4">
-                            <h5>Nous sommes</h5>
+                            <h5>Qu'est-ce que nous offront</h5>
                             <p className="lead">
-                                News isipa c'est une plateforme de l'isipa qui vous sert des informations 
-                                et des donnnées tres important afficher dans la valve, ils vous informe. Nous 
-                                sommes une nouvelle generation des etudiants.
+                                News isipa offre a tout les étudiants de l'isipa, des informations qui est afficher
+                                dans la valve, des informations communiquer a l'auditoire.
                             </p>
                         </Col>
                         <Col md="4">
                             <h5>Contact et Adresse</h5>
-                            <p className="lead">
-                                News isipa c'est une plateforme de l'isipa qui vous sert des informations 
-                                et des donnnées tres important afficher dans la valve, ils vous informe. Nous 
-                                sommes une nouvelle generation des etudiants.
-                            </p>
+                            <div>
+                                <span><FaMapMarkerAlt className="icon"/> I.S.I.P.A shaumba Gombe, Dept/Bibliothèque-Centrale</span>
+                            </div>
+                            <div>
+                                <span><FaMobileAlt className="icon"/> Vous pouvez nous joindre sur +243 824 029 562</span>
+                            </div>
+                            <div>
+                                <span><FaEnvelope className="icon"/> Envoyé nous un mail sur ksthray@gmail.com</span>
+                            </div>
+                            <div>
+                                <span><FaWhatsapp className="icon"/> +243 824 029 562</span>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
-                <Row style={{backgroundColor: "#2f3542", color: "#fff"}}>
+                <Row style={{position: "relative", top: "10px", backgroundColor: "#2f3542", color: "#fff"}}>
                     <Col>
                         <p className="lead text-center text-uppercase">
-                            Fais avec tout coeur par Sthray Kongolo
+                            <FaRegCopyright className="icon"/> Fais avec tout coeur <FaRegHeart className="icon"/> par Sthray Kongolo
                         </p>
                     </Col>
                 </Row>    

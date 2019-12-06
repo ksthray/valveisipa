@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import authors from '../utils/authors' 
 import {Card, CardBody, CardSubtitle} from 'reactstrap';  
+import { FaRegCalendarAlt, FaFeatherAlt } from 'react-icons/fa';
 import { DiscussionEmbed } from 'disqus-react';
 
 const SinglePost = ({ data, pageContext }) => {
@@ -27,8 +28,13 @@ const SinglePost = ({ data, pageContext }) => {
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                 <CardBody>
                     <CardSubtitle>
-                        <span className="text-info text-uppercase">{post.author}</span> <br/>
-                        <span className="text-info">{post.date}</span>
+                        <span className="text-info text-uppercase">
+                            <FaFeatherAlt style={{position: "relative", top: "-2px"}}/> {post.author}
+                        </span> 
+                        <br/>
+                        <span className="text-info">
+                            <FaRegCalendarAlt style={{position: "relative", top: "-2px"}}/> Posté, le {post.date}
+                        </span>
                     </CardSubtitle>
                     <div 
                         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}
@@ -54,7 +60,7 @@ export const postQuery = graphql`
             frontmatter{
                 title
                 author
-                date(formatString: "MMM Do YYYY")
+                date(formatString: "DD/MM/YYYY")
                 image{
                     childImageSharp{
                         fluid(maxWidth: 700){

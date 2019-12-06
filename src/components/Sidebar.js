@@ -63,7 +63,7 @@ const Sidebar = ({ author, authorFluid }) => (
                                 </Link>
                                 <CardBody>
                                     <CardTitle>
-                                        <Link to={node.fields.slug}>
+                                        <Link style={{color: "rgb(255, 84, 17)", fontWeight: "400"}} to={node.fields.slug}>
                                            {node.frontmatter.title} 
                                         </Link>
                                     </CardTitle>

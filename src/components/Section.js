@@ -68,7 +68,7 @@ const SectionStyle =  styled.div`
         }
     }
     //Responsive pour le smartphone qui 325px en longueur
-    @media screen and (max-width: 325px) {
+    @media screen and (max-width: 320px) {
         .section{
             height: auto;
             h1{
@@ -79,7 +79,7 @@ const SectionStyle =  styled.div`
             font-size: 35px;
             position: relative;
             top: 5px;
-            left: 115px;
+            left: 100px !important;
         }
         .promotion{
             position: relative;
@@ -95,7 +95,7 @@ const SectionStyle =  styled.div`
             height: auto;
             position: relative;
             top: 55px;
-            left: 55px;
+            left: 53px !important;
             
             h6{
                 font-size: 20px;
@@ -121,7 +121,7 @@ const SectionStyle =  styled.div`
             font-size: 45px;
             position: relative;
             top: 5px;
-            left: 115px;
+            left: 105px;
         }
         .promotion{
             position: relative;
@@ -291,7 +291,7 @@ const Section = () => {
                                         <p>Shaumba - Muchi - Kitega</p>
                                     </Col>
                                     <Col md="3">
-                                        <h6><strong>24/24</strong></h6>
+                                        <h6><strong>24h/24</strong></h6>
                                         <p>Toujours active</p>
                                     </Col>
                                 </Row>

@@ -40,7 +40,7 @@ export const postListeQuery = graphql`
                     id
                     frontmatter{
                         title
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "DD/MM/YYYY")
                         author
                         image{
                             childImageSharp{

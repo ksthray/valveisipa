@@ -22,7 +22,7 @@ const StyleCard = styled.div`
         transition: transform 0.5s ease;
     }
     .card-image-top:hover{
-        transform: scale(1.6);
+        transform: scale(1.5);
     }
     .overflow{
         overflow: hidden;
@@ -47,7 +47,7 @@ const Post = ({ title, author, slug, date, body, fluid}) => (
                     <Link style={{color: "rgb(255, 84, 17)"}} to={slug}><FaRegBell className="icons"/> {title}</Link>
                 </CardTitle>
                 <CardSubtitle style={{color: "rgb(255, 84, 17)"}}>
-                    <span style={{color: "rgb(255, 84, 17)"}}><FaRegCalendarAlt className="icons"/> Depuis {date}</span> <br/>
+                    <span style={{color: "rgb(255, 84, 17)"}}><FaRegCalendarAlt className="icons"/> Poster depuis, le {date}</span> <br/>
                     <span style={{color: "rgb(255, 84, 17)"}}><FaFeatherAlt className="icons"/> {author}</span>
                 </CardSubtitle>
                 <CardText>{body}</CardText>
