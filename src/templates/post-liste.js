@@ -13,13 +13,13 @@ const postListe = props => {
             {posts.map(({node}) => (
                 <div>
                     <Post 
-                    key={node.id}
-                    slug={node.fields.slug}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    date={node.frontmatter.date}
-                    body={node.excerpt}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                        key={node.id}
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title}
+                        author={node.frontmatter.author}
+                        date={node.frontmatter.date}
+                        body={node.excerpt}
+                        fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
                 </div>
             ))}

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import {Card, CardTitle, CardBody, CardText, CardImg} from 'reactstrap';
-import { FaRegClock, FaFacebookF } from 'react-icons/fa';
+import { FaRegClock, FaFacebookF, FaRegCalendarAlt } from 'react-icons/fa';
 import styled from 'styled-components';
 import pub from '../images/gear.jpg';
 
@@ -66,6 +66,11 @@ const Sidebar = ({ author, authorFluid }) => (
                                         <Link style={{color: "rgb(255, 84, 17)", fontWeight: "400"}} to={node.fields.slug}>
                                            {node.frontmatter.title} 
                                         </Link>
+                                        <br/>
+                                        <span style={{color: "rgb(255, 84, 17)", fontWeight: "400"}}>
+                                            <FaRegCalendarAlt style={{position: "relative", top: "-3px"}}/> 
+                                            {` `}{node.frontmatter.date}
+                                        </span>
                                     </CardTitle>
                                 </CardBody>
                             </Card>
@@ -81,13 +86,14 @@ const sidebarQuery = graphql`
     query sidebarQuery {
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC}
-            limit: 3
+            limit: 4
         ) {
             edges{
                 node{
                     id
                     frontmatter{
                         title
+                        date(formatString: "DD/MM/YYYY")
                         image{
                             childImageSharp{
                                 fluid(maxWidth: 300){

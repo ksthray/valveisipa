@@ -17,7 +17,6 @@ const StyleCard = styled.div`
     }
     .card-image-top{
         width: 100%;
-        height: 325px;
         transform: scale(1);
         transition: transform 0.5s ease;
     }

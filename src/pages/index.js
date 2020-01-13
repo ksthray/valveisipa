@@ -52,7 +52,7 @@ const indexQuery = graphql`
   query {
     allMarkdownRemark(
       sort: {fields: [frontmatter___date], order: DESC }
-      limit: 2
+      limit: 3
       ) {
         totalCount
       edges {
