@@ -92,9 +92,9 @@ const Jumbotron = () => (
             <div className="overlay"></div> 
             <Container>
                 <div className="content-text">
-                    <h1 className="display-3">Bienvenue sur <span style={{color: "rgb(255, 84, 17)"}}>news</span> isipa<span style={{color: "rgb(255, 84, 17)"}}>.</span></h1>
+                    <h1 className="display-3">Bienvenue sur <span style={{color: "rgb(255, 84, 17)"}}>VALVE</span> ISIPA<span style={{color: "rgb(255, 84, 17)"}}>.</span></h1>
                     <p className="lead">
-                        News isipa c'est une plateforme de l'isipa qui vous sert des informations 
+                        valve - isipa c'est une plateforme de l'isipa qui vous sert des informations 
                         et des donnnées tres important afficher dans la valve, ils vous informe. Nous 
                         sommes une nouvelle generation des etudiants.
                     </p>

@@ -1,6 +1,13 @@
 import React from 'react';
 import { Row, Col, Container} from 'reactstrap';
-import { FaRegCopyright, FaRegHeart, FaMapMarkerAlt, FaMobileAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
+import { 
+    FaRegCopyright, 
+    FaRegHeart, 
+    FaMapMarkerAlt, 
+    FaMobileAlt, 
+    FaEnvelope, 
+    FaWhatsapp 
+} from 'react-icons/fa'
 import styled from 'styled-components';
 
 const FooterStyle = styled.div`

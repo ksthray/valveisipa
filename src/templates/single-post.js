@@ -27,7 +27,7 @@ const SinglePost = ({ data, pageContext }) => {
             <Card>
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                 <CardBody>
-                    <CardSubtitle>
+                    <CardSubtitle style={{padding: "10px"}}>
                         <span className="text-info text-uppercase">
                             <FaFeatherAlt style={{position: "relative", top: "-2px"}}/> {post.author}
                         </span> 
@@ -37,6 +37,7 @@ const SinglePost = ({ data, pageContext }) => {
                         </span>
                     </CardSubtitle>
                     <div 
+                        style={{padding: "10px"}}
                         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}
                     />
                 </CardBody>

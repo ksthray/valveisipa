@@ -12,7 +12,7 @@ import { Container, Col, Row} from 'reactstrap';
 const SectionStyle =  styled.div`
     .section{
         padding: 20px;
-        height: 400px;
+        height: 470px;
         background: linear-gradient(217deg, rgba(255, 84, 17), rgb(246, 75, 2), rgb(220, 67, 0) 70.71%),
                     linear-gradient(127deg, rgba(255, 99, 35), rgb(246, 85, 2), rgb(202, 57, 0) 70.71%),
                     linear-gradient(336deg, rgba(255, 80, 40), rgb(216, 77, 2), rgb(202, 57, 0) 70.71%);
@@ -48,7 +48,7 @@ const SectionStyle =  styled.div`
         height: auto;
         background-color: white;
         position: relative;
-        top: 75px;
+        top: 155px;
         left: 100px;
         box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.220)!important;
         h6, p{ 
@@ -246,11 +246,11 @@ const Section = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Pourquoi <strong>NEWS ISIPA ?</strong></h1>
+                            <h1>Pourquoi <strong>VALVE - ISIPA ?</strong></h1>
                             <p>
                                 Les étudiants n'ont pas toujours habituer a regarder la valve,
                                 mais ils se connectent tout les jours a l'internet, c'est en se
-                                bassant la dessus que <strong>NEWS ISIPA</strong> a pu se creer,
+                                bassant la dessus que <strong>VALVE ISIPA</strong> a pu se creer,
                                 un site qui va leurs permettrent de voir tous les informations afficher
                                 dans la valve a travers leur phone.
                             </p>

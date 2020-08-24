@@ -39,6 +39,7 @@ const LayoutStyle = styled.div`
     .title{
       position: relative;
       top: 85px;
+      width: 100%;
     }
     .cadre{
       position: relative;
@@ -52,6 +53,7 @@ const LayoutStyle = styled.div`
     .title{
       position: relative;
       top: 85px;
+      width: 100%;
     }
     .cadre{
       position: relative;
@@ -65,6 +67,8 @@ const LayoutStyle = styled.div`
     .title{
       position: relative;
       top: 80px;
+      width: 100%;
+      overflow-x: hidden !important;
     }
     .cadre{
       position: relative;
@@ -76,6 +80,7 @@ const LayoutStyle = styled.div`
     .title{
       position: relative;
       top: 80px;
+      width: 100%;
     }
     .cadre{
       position: relative;
